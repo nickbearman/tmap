@@ -1,12 +1,12 @@
 pandoc: 3.1.11
-pkgdown: 2.0.9
+pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
-  tmap-changes: tmap-changes.html
-  tmap-getstarted: tmap-getstarted.html
-  tmap-JSS-code: tmap-JSS-code.html
-last_built: 2024-07-04T01:15Z
+  01_basics_vv: 01_basics_vv.html
+  02_theory_gg: 02_theory_gg.html
+  03_versus_ggplot2: 03_versus_ggplot2.html
+  04_examples_gridmaps: 04_examples_gridmaps.html
+last_built: 2024-12-07T12:38Z
 urls:
   reference: https://r-tmap.github.io/tmap/reference
   article: https://r-tmap.github.io/tmap/articles
-
