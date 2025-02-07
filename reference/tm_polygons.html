@@ -15,7 +15,7 @@ functions."><meta property="og:image" content="https://r-tmap.github.io/tmap/log
 
     <a class="navbar-brand me-2" href="../index.html">tmap</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.99.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +25,48 @@ functions."><meta property="og:image" content="https://r-tmap.github.io/tmap/log
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/01_basics_vv.html">tmap basics: visual variables</a></li>
-    <li><a class="dropdown-item" href="../articles/02_theory_gg.html">tmap theory: Grammar of Graphics`</a></li>
-    <li><a class="dropdown-item" href="../articles/03_versus_ggplot2.html">tmap versus: ggplot2</a></li>
-    <li><a class="dropdown-item" href="../articles/04_examples_gridmaps.html">tmap example: gridmaps</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-basics" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Basics</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-basics"><li><a class="dropdown-item" href="../articles/basics_vv">Visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_scales">Scales</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_modes">Modes</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_facets">Facets</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_legends">Legends</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_basemaps">Basemaps</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_components">Components</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_charts">Charts</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_layout">Layout</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_exporting">Exporting</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-foundations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Foundations</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-foundations"><li><a class="dropdown-item" href="../articles/foundations_gg">Grammar of Graphics</a></li>
+    <li><a class="dropdown-item" href="../articles/foundations_crs">Map projections (CRS)</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-examples" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Examples</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-examples"><li><a class="dropdown-item" href="../articles/examples_choro_World">Choropleth (World)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_choro_NLD">Choropleth (Netherlands)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_bubble">Bubble map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_raster">Raster map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_topo_Africa">Topographic map (Africa)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_terrain">Terrain map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_gridmaps">Gridmap</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-comparison" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Comparison</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-comparison"><li><a class="dropdown-item" href="../articles/versus_ggplot2">tmap vs ggplot2</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapview">tmap vs mapview</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapsf">tmap vs mapsf</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-advanced" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Advanced</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-advanced"><li><a class="dropdown-item" href="../articles/adv_shiny">Shiny integration</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_groups">Layer groups (view mode only)</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_multivariate">Multivariate visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_positions">Positioning of components</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_options">Options and styles</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_margins">Margins and aspect ratio</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_extensions">Extending tmap</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -209,13 +246,18 @@ features. Only used for <code>"view"</code> mode.</p></dd>
     <p>The visual variable arguments (e.g. <code>col</code>) can be specified with either a data
 variable name (e.g., a spatial vector attribute or a raster layer of the object
 specified in <code><a href="tm_shape.html">tm_shape()</a></code>), or with a visual value (for <code>col</code>, a color is expected).
-Multiple values can be specified: in that case facets are created.
-These facets can be combined with other faceting data variables, specified with <code><a href="tm_facets.html">tm_facets()</a></code>.</p><ul><li><p>The <code>*.scale</code> arguments determine the used scale to map the data values to
+See <a href="https://r-tmap.github.io/tmap/articles/basics_vv">vignette about visual variables</a>.</p>
+<p>Multiple values can be specified: in that case facets are created.
+These facets can be combined with other faceting data variables, specified with <code><a href="tm_facets.html">tm_facets()</a></code>.
+See <a href="https://r-tmap.github.io/tmap/articles/basics_facets">vignette about facets</a>.</p><ul><li><p>The <code>*.scale</code> arguments determine the used scale to map the data values to
 visual variable values. These can be specified with one of the available
-<code>tm_scale_*()</code> functions. The default is specified by the tmap option (<code><a href="tm_options.html">tm_options()</a></code>) <code>scales.var</code>.</p></li>
+<code>tm_scale_*()</code> functions. The default is specified by the tmap option (<code><a href="tm_options.html">tm_options()</a></code>) <code>scales.var</code>.
+See <a href="https://r-tmap.github.io/tmap/articles/basics_scales">vignette about scales</a>.</p></li>
 <li><p>The <code>*.legend</code> arguments determine the used legend, specified with <code><a href="tm_legend.html">tm_legend()</a></code>.
-The default legend and its settings are determined by the tmap options (<code><a href="tm_options.html">tm_options()</a></code>) <code>legend.</code> .</p></li>
-<li><p>The <code>*.chart</code> arguments specify additional charts, specified with <code>tm_chart_</code>, e.g. <code><a href="tm_chart.html">tm_chart_histogram()</a></code></p></li>
+The default legend and its settings are determined by the tmap options (<code><a href="tm_options.html">tm_options()</a></code>) <code>legend.</code> .
+See <a href="https://r-tmap.github.io/tmap/articles/basics_legends">vignette about legends</a>.</p></li>
+<li><p>The <code>*.chart</code> arguments specify additional charts, specified with <code>tm_chart_</code>, e.g. <code><a href="tm_chart.html">tm_chart_histogram()</a></code>.
+See <a href="https://r-tmap.github.io/tmap/articles/basics_charts">vignette about charts</a>.</p></li>
 <li><p>The <code>*.free</code> arguments determine whether scales are applied freely across facets, or shared.
 A logical value is required. They can also be specified with a vector of three
 logical values; these determine whether scales are applied freely per facet dimension.
@@ -227,6 +269,10 @@ scale, and therefore its own legend. For facet wraps and stacks
 (<code><a href="tm_facets.html">tm_facets_wrap()</a></code> and <code><a href="tm_facets.html">tm_facets_stack()</a></code>) there is only one facet dimension,
 so the <code>*.free</code> argument requires only one logical value.</p></li>
 </ul></div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><a href="https://r-tmap.github.io/tmap/articles/examples_choro_World">Choropleth example (1)</a> and <a href="https://r-tmap.github.io/tmap/articles/examples_choro_NLD">choropleth example (2)</a></p></div>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
@@ -237,11 +283,11 @@ so the <code>*.free</code> argument requires only one logical value.</p></li>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># without specifications</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa_border</span><span class="op">)</span> <span class="op">+</span> <span class="fu">tm_polygons</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-1.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa_border</span><span class="op">)</span> <span class="op">+</span> <span class="fu">tm_fill</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-2.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa_border</span><span class="op">)</span> <span class="op">+</span> <span class="fu">tm_borders</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-3.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># specification with visual variable values</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa</span><span class="op">)</span> <span class="op">+</span></span></span>
@@ -249,12 +295,12 @@ so the <code>*.free</code> argument requires only one logical value.</p></li>
 <span class="r-in"><span>  <span class="fu"><a href="tm_text.html">tm_text</a></span><span class="op">(</span><span class="st">"name"</span>, options <span class="op">=</span> <span class="fu"><a href="tm_text.html">opt_tm_text</a></span><span class="op">(</span>remove_overlap <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa_border</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">tm_borders</span><span class="op">(</span><span class="st">"darkred"</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-4.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># specification with a data variable</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">Africa</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">tm_polygons</span><span class="op">(</span>fill <span class="op">=</span> <span class="st">"income_grp"</span>, fill.scale <span class="op">=</span> <span class="fu"><a href="tm_scale_categorical.html">tm_scale_categorical</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"-tol.muted"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-5.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># continuous color scale with landscape legend</span></span></span>
@@ -269,18 +315,18 @@ so the <code>*.free</code> argument requires only one logical value.</p></li>
 <span class="r-in"><span>  <span class="fu">tm_borders</span><span class="op">(</span>lwd <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_title.html">tm_title</a></span><span class="op">(</span><span class="st">"Inequality index"</span>, position <span class="op">=</span> <span class="fu"><a href="tm_pos.html">tm_pos_in</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"TOP"</span><span class="op">)</span>, frame <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_layout.html">tm_layout</a></span><span class="op">(</span>frame <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-6.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-6.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># bivariate scale</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">World</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">tm_polygons</span><span class="op">(</span><span class="fu"><a href="tm_vars.html">tm_vars</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"inequality"</span>, <span class="st">"well_being"</span><span class="op">)</span>, multivariate <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> Labels abbreviated by the first letters, e.g.: "2 to 3" =&gt; "2"</span>
-<span class="r-plt img"><img src="tm_polygons-7.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-7.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">World</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu">tm_polygons</span><span class="op">(</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>   <span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_polygons-8.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_polygons-8.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

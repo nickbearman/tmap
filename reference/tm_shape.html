@@ -9,7 +9,7 @@ class packages: sf, stars, or terra."><meta property="og:image" content="https:/
 
     <a class="navbar-brand me-2" href="../index.html">tmap</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.99.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,11 +19,48 @@ class packages: sf, stars, or terra."><meta property="og:image" content="https:/
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/01_basics_vv.html">tmap basics: visual variables</a></li>
-    <li><a class="dropdown-item" href="../articles/02_theory_gg.html">tmap theory: Grammar of Graphics`</a></li>
-    <li><a class="dropdown-item" href="../articles/03_versus_ggplot2.html">tmap versus: ggplot2</a></li>
-    <li><a class="dropdown-item" href="../articles/04_examples_gridmaps.html">tmap example: gridmaps</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-basics" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Basics</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-basics"><li><a class="dropdown-item" href="../articles/basics_vv">Visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_scales">Scales</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_modes">Modes</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_facets">Facets</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_legends">Legends</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_basemaps">Basemaps</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_components">Components</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_charts">Charts</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_layout">Layout</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_exporting">Exporting</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-foundations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Foundations</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-foundations"><li><a class="dropdown-item" href="../articles/foundations_gg">Grammar of Graphics</a></li>
+    <li><a class="dropdown-item" href="../articles/foundations_crs">Map projections (CRS)</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-examples" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Examples</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-examples"><li><a class="dropdown-item" href="../articles/examples_choro_World">Choropleth (World)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_choro_NLD">Choropleth (Netherlands)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_bubble">Bubble map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_raster">Raster map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_topo_Africa">Topographic map (Africa)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_terrain">Terrain map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_gridmaps">Gridmap</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-comparison" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Comparison</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-comparison"><li><a class="dropdown-item" href="../articles/versus_ggplot2">tmap vs ggplot2</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapview">tmap vs mapview</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapsf">tmap vs mapsf</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-advanced" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Advanced</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-advanced"><li><a class="dropdown-item" href="../articles/adv_shiny">Shiny integration</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_groups">Layer groups (view mode only)</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_multivariate">Multivariate visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_positions">Positioning of components</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_options">Options and styles</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_margins">Margins and aspect ratio</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_extensions">Extending tmap</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -73,7 +110,7 @@ class packages: <code><a href="https://r-spatial.github.io/sf/reference/sf.html"
 
 
 <dt id="arg-crs">crs<a class="anchor" aria-label="anchor" href="#arg-crs"></a></dt>
-<dd><p>CRS to which <code>shp</code> is reprojected (only used if <code>is.main = TRUE</code>)</p></dd>
+<dd><p>Map projection (CRS). Can be set to an <code>crs</code> object (see <code><a href="https://r-spatial.github.io/sf/reference/st_crs.html" class="external-link">sf::st_crs()</a></code>), a proj4string, an EPSG number, the value <code>"auto"</code> (automatic crs recommendation), or one the the following generic projections: <code>c("laea", "aeqd", "utm", "pconic", "eqdc", "stere")</code>. See details.</p></dd>
 
 
 <dt id="arg-is-main">is.main<a class="anchor" aria-label="anchor" href="#arg-is-main"></a></dt>
@@ -82,7 +119,7 @@ bounding box of the map? By default, <code>TRUE</code> if it is the first <code>
 
 
 <dt id="arg-name">name<a class="anchor" aria-label="anchor" href="#arg-name"></a></dt>
-<dd><p>Name of the shape</p></dd>
+<dd><p>of the spatial object</p></dd>
 
 
 <dt id="arg-unit">unit<a class="anchor" aria-label="anchor" href="#arg-unit"></a></dt>
@@ -94,19 +131,43 @@ bounding box of the map? By default, <code>TRUE</code> if it is the first <code>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
-<dd><p>passed on to <code><a href="https://rdrr.io/pkg/tmaptools/man/bb.html" class="external-link">bb</a></code> (e.g. <code>ext</code> can be used to enlarge or shrink a bounding box)</p></dd>
+<dd><p>passed on to <code><a href="https://r-tmap.github.io/tmaptools/reference/bb.html">bb</a></code> (e.g. <code>ext</code> can be used to enlarge or shrink a bounding box)</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p>The map projection (<code>crs</code>) determines in which coordinate system the spatial object is processed and plotted.
+See <a href="https://r-tmap.github.io/tmap/articles/foundations_crs">vignette about CRS</a>. The <code>crs</code> can be specified in two places: 1) <code>tm_shape()</code> and <code><a href="tm_crs.html">tm_crs()</a></code>.
+In both cases, the map is plotted into the specified <code>crs</code>. The difference is that in the first option, the <code>crs</code> is also taken into account in spatial transformation functions, such as the calculation of centroids and cartograms. In the second option, the <code>crs</code> is only used in the plotting phase.</p>
+<p>The automatic crs recommendation (which is still work-in-progress) is the following:</p><table class="table table"><tr><td><strong>Property</strong></td><td><strong>Recommendation</strong></td></tr><tr><td><code>global</code> (for world maps)</td><td>A pseudocylindrical projection tmap option <code>crs_global</code>, by default <code>"eqearth</code> (Equal Eearth). See <a href="https://r-tmap.github.io/tmap/articles/41_advanced_crs.html">https://r-tmap.github.io/tmap/articles/41_advanced_crs.html</a> for more options</td></tr><tr><td><code>area</code> (equal area)</td><td>Lambert Azimuthal Equal Area (<code>laea</code>)</td></tr><tr><td><code>distance</code>	(equidistant)</td><td>Azimuthal Equidistant (<code>aeqd</code>)</td></tr><tr><td><code>shape</code>	(conformal)</td><td>Stereographic (<code>stere</code>)</td></tr></table><p>For further info about the available "generic" projects see:
+for utm: <a href="https://proj.org/en/9.4/operations/projections/utm.html" class="external-link">https://proj.org/en/9.4/operations/projections/utm.html</a>
+for laea: <a href="https://proj.org/en/9.4/operations/projections/laea.html" class="external-link">https://proj.org/en/9.4/operations/projections/laea.html</a>
+for aeqd: <a href="https://proj.org/en/9.4/operations/projections/aeqd.html" class="external-link">https://proj.org/en/9.4/operations/projections/aeqd.html</a>
+for pconic: <a href="https://proj.org/en/9.4/operations/projections/pconic.html" class="external-link">https://proj.org/en/9.4/operations/projections/pconic.html</a>
+for eqdc: <a href="https://proj.org/en/9.4/operations/projections/eqdc.html" class="external-link">https://proj.org/en/9.4/operations/projections/eqdc.html</a></p>
+    </div>
+    <div class="section level2">
+    <h2 id="note">Note<a class="anchor" aria-label="anchor" href="#note"></a></h2>
+    <p>as of tmap 4.0, simplify has been removed. Please use <code><a href="https://r-tmap.github.io/tmaptools/reference/simplify_shape.html">tmaptools::simplify_shape()</a></code> instead</p>
+    </div>
+    <div class="section level2">
+    <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
+    <div class="dont-index"><p><a href="https://r-tmap.github.io/tmap/articles/foundations_crs">vignette about CRS</a></p></div>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">tm_shape</span><span class="op">(</span><span class="va">World</span>, crs <span class="op">=</span> <span class="st">"+proj=ortho +lat_0=-10 +lon_0=-30"</span><span class="op">)</span> <span class="op">+</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">tm_shape</span><span class="op">(</span><span class="va">World</span>, crs <span class="op">=</span> <span class="st">"auto"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="tm_polygons.html">tm_polygons</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_shape-1.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_shape-1.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="fu">tm_shape</span><span class="op">(</span><span class="va">World</span>, crs <span class="op">=</span> <span class="fl">3035</span>, bb <span class="op">=</span> <span class="st">"Europe"</span><span class="op">)</span> <span class="op">+</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="tm_polygons.html">tm_polygons</a></span><span class="op">(</span><span class="op">)</span></span></span>
+<span class="r-plt img"><img src="tm_shape-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">tm_shape</span><span class="op">(</span><span class="va">World</span>, crs <span class="op">=</span> <span class="st">"+proj=robin"</span>, filter <span class="op">=</span> <span class="va">World</span><span class="op">$</span><span class="va">continent</span><span class="op">==</span><span class="st">"Africa"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="tm_polygons.html">tm_polygons</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_shape-2.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_shape-3.png" alt="" width="700" height="433"></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

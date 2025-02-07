@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">tmap</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.99.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,11 +17,48 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/01_basics_vv.html">tmap basics: visual variables</a></li>
-    <li><a class="dropdown-item" href="../articles/02_theory_gg.html">tmap theory: Grammar of Graphics`</a></li>
-    <li><a class="dropdown-item" href="../articles/03_versus_ggplot2.html">tmap versus: ggplot2</a></li>
-    <li><a class="dropdown-item" href="../articles/04_examples_gridmaps.html">tmap example: gridmaps</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-basics" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Basics</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-basics"><li><a class="dropdown-item" href="../articles/basics_vv">Visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_scales">Scales</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_modes">Modes</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_facets">Facets</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_legends">Legends</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_basemaps">Basemaps</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_components">Components</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_charts">Charts</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_layout">Layout</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_exporting">Exporting</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-foundations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Foundations</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-foundations"><li><a class="dropdown-item" href="../articles/foundations_gg">Grammar of Graphics</a></li>
+    <li><a class="dropdown-item" href="../articles/foundations_crs">Map projections (CRS)</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-examples" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Examples</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-examples"><li><a class="dropdown-item" href="../articles/examples_choro_World">Choropleth (World)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_choro_NLD">Choropleth (Netherlands)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_bubble">Bubble map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_raster">Raster map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_topo_Africa">Topographic map (Africa)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_terrain">Terrain map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_gridmaps">Gridmap</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-comparison" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Comparison</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-comparison"><li><a class="dropdown-item" href="../articles/versus_ggplot2">tmap vs ggplot2</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapview">tmap vs mapview</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapsf">tmap vs mapsf</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-advanced" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Advanced</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-advanced"><li><a class="dropdown-item" href="../articles/adv_shiny">Shiny integration</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_groups">Layer groups (view mode only)</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_multivariate">Multivariate visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_positions">Positioning of components</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_options">Options and styles</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_margins">Margins and aspect ratio</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_extensions">Extending tmap</a></li>
   </ul></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -39,15 +76,36 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="4.0" id="tmap-40-development-version">tmap 4.0 (development version)<a class="anchor" aria-label="anchor" href="#tmap-40-development-version"></a></h2>
-<ul><li><p>For consistency with ggplot2, <code><a href="../reference/tm_polygons.html">tm_polygons()</a></code> now recognizes the <code>fill</code> argument instead of <code>col</code>.</p></li>
-<li><p>Similarly, <code>border.col</code> is now <code>col</code>.</p></li>
-<li><p>tmap now requires R 3.6 and above.</p></li>
-<li><p>In view mode, <code>hover</code> is now independent from <code>id</code> (<a href="https://github.com/r-tmap/tmap/issues/851" class="external-link">#851</a>).</p></li>
-<li><p><code><a href="../reference/tm_vars.html">tm_vars()</a></code> is a new function for multivariate scale (<a href="https://github.com/r-tmap/tmap/issues/819" class="external-link">#819</a>)</p></li>
-<li><p>New family of functions <code>tm_chart_*()</code> to do charting (See <code><a href="../reference/tm_chart.html">?tm_chart</a></code>) (<a href="https://github.com/r-tmap/tmap/issues/581" class="external-link">#581</a>)</p></li>
-<li><p>New <a href="https://r-tmap.github.io/tmap/articles/">vignettes</a> available to explain how to upgrade your code to tmap v4</p></li>
+<h2 class="pkg-version" data-toc-text="development version" id="tmap-development-version">tmap (development version)<a class="anchor" aria-label="anchor" href="#tmap-development-version"></a></h2>
+</div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="4.0" id="tmap-40">tmap 4.0<a class="anchor" aria-label="anchor" href="#tmap-40"></a></h2><p class="text-muted">CRAN release: 2025-01-27</p>
+<p>tmap v4 is a major release and has been rewritten from scratch. It contains tons of new features. Although we did our best to make changes backwards compatible, some things may not work as expected.</p>
+<div class="section level4">
+<h4 id="new-syntax-4-0">New syntax<a class="anchor" aria-label="anchor" href="#new-syntax-4-0"></a></h4>
+<ul><li>The arguments of layer functions such as <code><a href="../reference/tm_symbols.html">tm_symbols()</a></code> have been reorganized. <a href="https://r-tmap.github.io/tmap/articles/01_basics_vv.html">Visual variables</a> are used with explicit <a href="https://r-tmap.github.io/tmap/articles/basics_scales">scales</a>, <a href="https://r-tmap.github.io/tmap/articles/basics_legends">legends</a>, and <a href="https://r-tmap.github.io/tmap/articles/basics_charts">charts</a>.</li>
+<li>The names of visual variables are consistent across standard map layer functions. For vector data, <code>fill</code> is the visual variable for fill color and <code>col</code> for border color.</li>
+<li>New <a href="https://r-tmap.github.io/tmap/index.html">vignettes</a> available to explain how to upgrade your code to tmap v4.</li>
 </ul></div>
+<div class="section level4">
+<h4 id="updated-datasets-4-0">Updated datasets<a class="anchor" aria-label="anchor" href="#updated-datasets-4-0"></a></h4>
+<ul><li>
+<code>rivers</code> has been renamed to <code>World_rivers</code> due to the name clash with <code>rivers</code> from <code>datasets</code>.</li>
+<li>The Netherlands datasets have been updated: from 2022 <code>NLD_prov</code>, <code>NLD_muni</code>, and (new) <code>NLD_dist</code> (district level) have been included with new demographic variables.</li>
+<li>
+<code>land</code> has included color tables</li>
+</ul></div>
+<div class="section level4">
+<h4 id="extensions-4-0">Extensions<a class="anchor" aria-label="anchor" href="#extensions-4-0"></a></h4>
+<ul><li>tmap can now be <a href="https://r-tmap.github.io/tmap/articles/adv_extensions">extended</a> in several ways.</li>
+</ul></div>
+<div class="section level4">
+<h4 id="backwards-compatibility-4-0">Backwards compatibility<a class="anchor" aria-label="anchor" href="#backwards-compatibility-4-0"></a></h4>
+<ul><li>All tmap v3 code should be backwards compatible with v4.</li>
+<li>We added ‘v3’ styles to make the layout (almost) identical to v3</li>
+<li>We introduced messages to make it easier for you to upgrade your code</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="3.3-4" id="tmap-33-4">tmap 3.3-4<a class="anchor" aria-label="anchor" href="#tmap-33-4"></a></h2><p class="text-muted">CRAN release: 2023-09-12</p>
 <ul><li>(!) last version of tmap 3.x. Next CRAN version will be tmap 4.x</li>
@@ -138,7 +196,7 @@
 </li>
 <li>improved <code><a href="../reference/tmap_save.html">tmap_save()</a></code> (regarding default values)</li>
 <li>improved <code><a href="../reference/tm_rgb.html">tm_rgb()</a></code> (added r g b and max.value arguments)</li>
-<li>added <code><a href="../reference/tm_graticules.html">tm_graticules()</a></code>
+<li>added <code><a href="../reference/tm_grid.html">tm_graticules()</a></code>
 </li>
 <li>supported TMS servers</li>
 <li>in view mode, layers can be hidden from the legend with <code>group = NULL</code>
@@ -255,12 +313,12 @@
 <h2 class="pkg-version" data-toc-text="1.6" id="tmap-16">tmap 1.6<a class="anchor" aria-label="anchor" href="#tmap-16"></a></h2><p class="text-muted">CRAN release: 2016-10-21</p>
 <ul><li>[!] <code><a href="../reference/tm_symbols.html">tm_symbols()</a></code> added, to create proportional symbol maps: besides bubbles, it also supports other symbol shapes, png icons, and small ggplot2 plots</li>
 <li>[!] imported cartogram function from cartogram package (thanks Sebastian!)</li>
-<li>[!] reverse geocoding function <code><a href="https://rdrr.io/pkg/tmaptools/man/rev_geocode_OSM.html" class="external-link">tmaptools::rev_geocode_OSM()</a></code> added</li>
+<li>[!] reverse geocoding function <code><a href="https://r-tmap.github.io/tmaptools/reference/rev_geocode_OSM.html">tmaptools::rev_geocode_OSM()</a></code> added</li>
 <li>[!] <code><a href="../reference/tm_logo.html">tm_logo()</a></code> added</li>
 <li>added <code>popup.vars</code> to base layer functions</li>
 <li>bounding box (argument <code>bbox</code> in <code><a href="../reference/tm_shape.html">tm_shape()</a></code>) working in view mode</li>
 <li>
-<code><a href="https://rdrr.io/pkg/tmaptools/man/geocode_OSM.html" class="external-link">tmaptools::geocode_OSM()</a></code> improved: a <code>SpatialPointsDataFrame</code> can now be returned</li>
+<code><a href="https://r-tmap.github.io/tmaptools/reference/geocode_OSM.html">tmaptools::geocode_OSM()</a></code> improved: a <code>SpatialPointsDataFrame</code> can now be returned</li>
 <li>
 <code>last_tmap()</code> added, which retrieves the last produced map</li>
 <li>crop_shape can also handle polygons as cropping area</li>
@@ -291,7 +349,7 @@
 <h2 class="pkg-version" data-toc-text="1.4" id="tmap-14">tmap 1.4<a class="anchor" aria-label="anchor" href="#tmap-14"></a></h2><p class="text-muted">CRAN release: 2016-03-18</p>
 <ul><li>[!] interactive mapping added. Now, tmap has two modes: “plot” (graphics device) and “view” (interactive viewer, which is a leaflet widget)</li>
 <li>[!] facets (small multiples) improved: group by two variables possible, panel layout added, missing data can be shown separately</li>
-<li>added <code>geocode_OSM()</code>, a function to find coordinates (now <code><a href="https://rdrr.io/pkg/tmaptools/man/geocode_OSM.html" class="external-link">tmaptools::geocode_OSM()</a></code>)</li>
+<li>added <code>geocode_OSM()</code>, a function to find coordinates (now <code><a href="https://r-tmap.github.io/tmaptools/reference/geocode_OSM.html">tmaptools::geocode_OSM()</a></code>)</li>
 <li>improved set_projection for raster objects</li>
 <li>added <code>double_line</code> and <code>offset_line</code>
 </li>
@@ -314,7 +372,7 @@
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.2" id="tmap-12">tmap 1.2<a class="anchor" aria-label="anchor" href="#tmap-12"></a></h2><p class="text-muted">CRAN release: 2015-12-11</p>
-<ul><li>added <code>read_osm()</code>, a function to read Open Street Map data (now <code><a href="https://rdrr.io/pkg/tmaptools/man/read_osm.html" class="external-link">tmaptools::read_osm()</a></code>)</li>
+<ul><li>added <code>read_osm()</code>, a function to read Open Street Map data (now <code><a href="https://r-tmap.github.io/tmaptools/reference/read_osm.html">tmaptools::read_osm()</a></code>)</li>
 <li>added <code>bb</code>, a handy bounding box function</li>
 <li>added layout themes with tm_style and tm_format</li>
 <li>added automatic text labeling</li>
@@ -367,7 +425,7 @@
 <ul><li>enhanced small multiples (<code><a href="../reference/tm_facets.html">tm_facets()</a></code>) with respect to scaling and free coordinate scales</li>
 <li>added <code>alpha</code> argument to <code>tm_layers()</code> for transparency</li>
 <li>added text shadow argument</li>
-<li>added function <code><a href="https://rdrr.io/r/base/split.html" class="external-link">split()</a></code> to split a shape object and <code>sbind()</code> to combine shape objects.</li>
+<li>added function <code><a href="https://rspatial.github.io/terra/reference/split.html" class="external-link">split()</a></code> to split a shape object and <code>sbind()</code> to combine shape objects.</li>
 <li>added automatic legend positioning when <code>legend.position = NULL</code>
 </li>
 <li>improved number formatting in legend</li>

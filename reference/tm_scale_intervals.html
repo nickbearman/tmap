@@ -13,7 +13,7 @@ The function tm_scale_intervals() is used for numerical data."><meta property="o
 
     <a class="navbar-brand me-2" href="../index.html">tmap</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.99.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,11 +23,48 @@ The function tm_scale_intervals() is used for numerical data."><meta property="o
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/01_basics_vv.html">tmap basics: visual variables</a></li>
-    <li><a class="dropdown-item" href="../articles/02_theory_gg.html">tmap theory: Grammar of Graphics`</a></li>
-    <li><a class="dropdown-item" href="../articles/03_versus_ggplot2.html">tmap versus: ggplot2</a></li>
-    <li><a class="dropdown-item" href="../articles/04_examples_gridmaps.html">tmap example: gridmaps</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-basics" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Basics</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-basics"><li><a class="dropdown-item" href="../articles/basics_vv">Visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_scales">Scales</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_modes">Modes</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_facets">Facets</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_legends">Legends</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_basemaps">Basemaps</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_components">Components</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_charts">Charts</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_layout">Layout</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_exporting">Exporting</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-foundations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Foundations</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-foundations"><li><a class="dropdown-item" href="../articles/foundations_gg">Grammar of Graphics</a></li>
+    <li><a class="dropdown-item" href="../articles/foundations_crs">Map projections (CRS)</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-examples" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Examples</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-examples"><li><a class="dropdown-item" href="../articles/examples_choro_World">Choropleth (World)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_choro_NLD">Choropleth (Netherlands)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_bubble">Bubble map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_raster">Raster map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_topo_Africa">Topographic map (Africa)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_terrain">Terrain map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_gridmaps">Gridmap</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-comparison" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Comparison</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-comparison"><li><a class="dropdown-item" href="../articles/versus_ggplot2">tmap vs ggplot2</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapview">tmap vs mapview</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapsf">tmap vs mapsf</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-advanced" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Advanced</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-advanced"><li><a class="dropdown-item" href="../articles/adv_shiny">Shiny integration</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_groups">Layer groups (view mode only)</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_multivariate">Multivariate visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_positions">Positioning of components</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_options">Options and styles</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_margins">Margins and aspect ratio</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_extensions">Extending tmap</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -61,7 +98,7 @@ The function <code>tm_scale_intervals()</code> is used for numerical data.</p>
 <span>  breaks <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  interval.closure <span class="op">=</span> <span class="st">"left"</span>,</span>
 <span>  midpoint <span class="op">=</span> <span class="cn">NULL</span>,</span>
-<span>  as.count <span class="op">=</span> <span class="cn">NA</span>,</span>
+<span>  as.count <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  values <span class="op">=</span> <span class="cn">NA</span>,</span>
 <span>  values.repeat <span class="op">=</span> <span class="cn">FALSE</span>,</span>
 <span>  values.range <span class="op">=</span> <span class="cn">NA</span>,</span>
@@ -93,7 +130,7 @@ The function <code>tm_scale_intervals()</code> is used for numerical data.</p>
 
 
 <dt id="arg-breaks">breaks<a class="anchor" aria-label="anchor" href="#arg-breaks"></a></dt>
-<dd><p>Interval breaks (only used and required when <code>style=="fixed"</code>)</p></dd>
+<dd><p>Interval breaks (only used and required when <code>style = "fixed"</code>)</p></dd>
 
 
 <dt id="arg-interval-closure">interval.closure<a class="anchor" aria-label="anchor" href="#arg-interval-closure"></a></dt>
@@ -105,11 +142,11 @@ The function <code>tm_scale_intervals()</code> is used for numerical data.</p>
 
 
 <dt id="arg-as-count">as.count<a class="anchor" aria-label="anchor" href="#arg-as-count"></a></dt>
-<dd><p>Should the data variable be processed as a count variable? For instance, if <code>style = "pretty"</code>, <code>n = 2</code>, and the value range of the variable is 0 to 10, then the column classes for <code>as.count = TRUE</code> are 0; 1 to 5; 6 to 10 (note that 0 is regarded as an own category) whereas for <code>as.count = FALSE</code> they are 0 to 5; 5 to 10. Only applicable if <code>style</code> is <code>"pretty"</code>, <code>"fixed"</code>, or <code>"log10_pretty"</code>. By default, <code>TRUE</code> if <code>style</code> is one of these, and the variable is an integer.</p></dd>
+<dd><p>Should the data variable be processed as a count variable? For instance, if <code>style = "pretty"</code>, <code>n = 2</code>, and the value range of the variable is 0 to 10, then the column classes for <code>as.count = TRUE</code> are 0; 1 to 5; 6 to 10 (note that 0 is regarded as an own category) whereas for <code>as.count = FALSE</code> they are 0 to 5; 5 to 10. Only applicable if <code>style</code> is <code>"pretty"</code>, <code>"fixed"</code>, or <code>"log10_pretty"</code>. By default <code>FALSE</code>.</p></dd>
 
 
 <dt id="arg-values">values<a class="anchor" aria-label="anchor" href="#arg-values"></a></dt>
-<dd><p>(generic scale argument) The visual values. For colors (e.g. <code>fill</code> or <code>col</code> for <code><a href="tm_polygons.html">tm_polygons()</a></code>) this is a palette name from the <code>cols4all</code> package (see <code><a href="https://mtennekes.github.io/cols4all/reference/c4a.html" class="external-link">cols4all::c4a()</a></code>) or vector of colors, for size (e.g. <code>size</code> for <code>tm_symbols</code>) these are a set of sizes (if two values are specified they are interpret as range), for symbol shapes (e.g. <code>shape</code> for <code>tm_symbols</code>) these are a set of symbols, etc. The tmap option <code>values.var</code> contains the default values per visual variable and in some cases also per data type.</p></dd>
+<dd><p>(generic scale argument) The visual values. For colors (e.g. <code>fill</code> or <code>col</code> for <code><a href="tm_polygons.html">tm_polygons()</a></code>) this is a palette name from the <code>cols4all</code> package (see <code><a href="https://rdrr.io/pkg/cols4all/man/c4a.html" class="external-link">cols4all::c4a()</a></code>) or vector of colors, for size (e.g. <code>size</code> for <code>tm_symbols</code>) these are a set of sizes (if two values are specified they are interpret as range), for symbol shapes (e.g. <code>shape</code> for <code>tm_symbols</code>) these are a set of symbols, etc. The tmap option <code>values.var</code> contains the default values per visual variable and in some cases also per data type.</p></dd>
 
 
 <dt id="arg-values-repeat">values.repeat<a class="anchor" aria-label="anchor" href="#arg-values-repeat"></a></dt>

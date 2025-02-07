@@ -15,7 +15,7 @@ The functions tm_scale_continuous_&amp;lt;x&amp;gt;() use transformation functio
 
     <a class="navbar-brand me-2" href="../index.html">tmap</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">3.99.9003</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">4.0.0.9000</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,11 +25,48 @@ The functions tm_scale_continuous_&amp;lt;x&amp;gt;() use transformation functio
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item dropdown">
-  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
-  <ul class="dropdown-menu" aria-labelledby="dropdown-articles"><li><a class="dropdown-item" href="../articles/01_basics_vv.html">tmap basics: visual variables</a></li>
-    <li><a class="dropdown-item" href="../articles/02_theory_gg.html">tmap theory: Grammar of Graphics`</a></li>
-    <li><a class="dropdown-item" href="../articles/03_versus_ggplot2.html">tmap versus: ggplot2</a></li>
-    <li><a class="dropdown-item" href="../articles/04_examples_gridmaps.html">tmap example: gridmaps</a></li>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-basics" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Basics</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-basics"><li><a class="dropdown-item" href="../articles/basics_vv">Visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_scales">Scales</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_modes">Modes</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_facets">Facets</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_legends">Legends</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_basemaps">Basemaps</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_components">Components</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_charts">Charts</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_layout">Layout</a></li>
+    <li><a class="dropdown-item" href="../articles/basics_exporting">Exporting</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-foundations" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Foundations</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-foundations"><li><a class="dropdown-item" href="../articles/foundations_gg">Grammar of Graphics</a></li>
+    <li><a class="dropdown-item" href="../articles/foundations_crs">Map projections (CRS)</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-examples" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Examples</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-examples"><li><a class="dropdown-item" href="../articles/examples_choro_World">Choropleth (World)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_choro_NLD">Choropleth (Netherlands)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_bubble">Bubble map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_raster">Raster map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_topo_Africa">Topographic map (Africa)</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_terrain">Terrain map</a></li>
+    <li><a class="dropdown-item" href="../articles/examples_gridmaps">Gridmap</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-comparison" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Comparison</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-comparison"><li><a class="dropdown-item" href="../articles/versus_ggplot2">tmap vs ggplot2</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapview">tmap vs mapview</a></li>
+    <li><a class="dropdown-item" href="../articles/versus_mapsf">tmap vs mapsf</a></li>
+  </ul></li>
+<li class="nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-advanced" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Advanced</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-advanced"><li><a class="dropdown-item" href="../articles/adv_shiny">Shiny integration</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_groups">Layer groups (view mode only)</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_multivariate">Multivariate visual variables</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_positions">Positioning of components</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_options">Options and styles</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_margins">Margins and aspect ratio</a></li>
+    <li><a class="dropdown-item" href="../articles/adv_extensions">Extending tmap</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -100,7 +137,7 @@ The functions <code>tm_scale_continuous_&lt;x&gt;()</code> use transformation fu
 
 
 <dt id="arg-limits">limits<a class="anchor" aria-label="anchor" href="#arg-limits"></a></dt>
-<dd><p>Limits of the data values that are mapped to the continuous scale</p></dd>
+<dd><p>Limits of the data values that are mapped to the continuous scale. When <code>NA</code>, the range of data values is taken. When only one value is provided, the range of data values with this provided value is taken. The default depends on the visual variable: it is 0 for all visual variables other than color when <code>tm_scale_continuous</code> is used. For the transformation scale functions, it is <code>NA</code>.</p></dd>
 
 
 <dt id="arg-outliers-trunc">outliers.trunc<a class="anchor" aria-label="anchor" href="#arg-outliers-trunc"></a></dt>
@@ -120,7 +157,7 @@ The functions <code>tm_scale_continuous_&lt;x&gt;()</code> use transformation fu
 
 
 <dt id="arg-values">values<a class="anchor" aria-label="anchor" href="#arg-values"></a></dt>
-<dd><p>(generic scale argument) The visual values. For colors (e.g. <code>fill</code> or <code>col</code> for <code><a href="tm_polygons.html">tm_polygons()</a></code>) this is a palette name from the <code>cols4all</code> package (see <code><a href="https://mtennekes.github.io/cols4all/reference/c4a.html" class="external-link">cols4all::c4a()</a></code>) or vector of colors, for size (e.g. <code>size</code> for <code><a href="tm_symbols.html">tm_symbols()</a></code>) these are a set of sizes (if two values are specified they are interpret as range), for symbol shapes (e.g. <code>shape</code> for <code><a href="tm_symbols.html">tm_symbols()</a></code>) these are a set of symbols, etc. The tmap option <code>values.var</code> contains the default values per visual variable and in some cases also per data type.</p></dd>
+<dd><p>(generic scale argument) The visual values. For colors (e.g. <code>fill</code> or <code>col</code> for <code><a href="tm_polygons.html">tm_polygons()</a></code>) this is a palette name from the <code>cols4all</code> package (see <code><a href="https://rdrr.io/pkg/cols4all/man/c4a.html" class="external-link">cols4all::c4a()</a></code>) or vector of colors, for size (e.g. <code>size</code> for <code><a href="tm_symbols.html">tm_symbols()</a></code>) these are a set of sizes (if two values are specified they are interpret as range), for symbol shapes (e.g. <code>shape</code> for <code><a href="tm_symbols.html">tm_symbols()</a></code>) these are a set of symbols, etc. The tmap option <code>values.var</code> contains the default values per visual variable and in some cases also per data type.</p></dd>
 
 
 <dt id="arg-values-repeat">values.repeat<a class="anchor" aria-label="anchor" href="#arg-values-repeat"></a></dt>
@@ -190,7 +227,7 @@ The functions <code>tm_scale_continuous_&lt;x&gt;()</code> use transformation fu
 <span class="r-in"><span>  <span class="fu"><a href="tm_polygons.html">tm_polygons</a></span><span class="op">(</span></span></span>
 <span class="r-in"><span>    fill <span class="op">=</span> <span class="st">"HPI"</span>,</span></span>
 <span class="r-in"><span>    fill.scale <span class="op">=</span> <span class="fu">tm_scale_continuous</span><span class="op">(</span>values <span class="op">=</span> <span class="st">"scico.roma"</span>, midpoint <span class="op">=</span> <span class="fl">30</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_scale_continuous-1.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_scale_continuous-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">metro</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="tm_symbols.html">tm_bubbles</a></span><span class="op">(</span></span></span>
@@ -198,7 +235,7 @@ The functions <code>tm_scale_continuous_&lt;x&gt;()</code> use transformation fu
 <span class="r-in"><span>    size.scale <span class="op">=</span> <span class="fu">tm_scale_continuous</span><span class="op">(</span></span></span>
 <span class="r-in"><span>      values.scale <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    size.legend <span class="op">=</span> <span class="fu"><a href="tm_legend.html">tm_legend</a></span><span class="op">(</span><span class="st">"Population in 1950"</span>, frame <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_scale_continuous-2.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_scale_continuous-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="tm_shape.html">tm_shape</a></span><span class="op">(</span><span class="va">metro</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="tm_symbols.html">tm_bubbles</a></span><span class="op">(</span></span></span>
@@ -211,7 +248,7 @@ The functions <code>tm_scale_continuous_&lt;x&gt;()</code> use transformation fu
 <span class="r-in"><span>        <span class="st">"1,000,000 - 10,000,000"</span>, <span class="st">"10,000,000 or more"</span><span class="op">)</span>, </span></span>
 <span class="r-in"><span>      outliers.trunc <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="cn">TRUE</span>, <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>    size.legend <span class="op">=</span> <span class="fu"><a href="tm_legend.html">tm_legend</a></span><span class="op">(</span><span class="st">"Population in 1950"</span>, frame <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="tm_scale_continuous-3.png" alt="" width="1050" height="1699"></span>
+<span class="r-plt img"><img src="tm_scale_continuous-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span><span class="co"># Note that for this type of legend, we recommend tm_scale_intervals()</span></span></span>
 </code></pre></div>
     </div>
